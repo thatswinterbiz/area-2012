@@ -1,25 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject bulletPrefab;
-    public Transform firePoint;
-    public float bulletForce;
+    [SerializeField] private float cooldown = 0.25f;
+    private float cooldownTimer;
 
-    // Update is called once per frame
-    void Update()
+    //public GameObject bulletPrefab;
+    //public Transform firePoint;
+    //public float bulletForce;
+
+    private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            Shoot();
-        }
+        cooldownTimer += Time.deltaTime;
     }
 
-    void Shoot()
+    private void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if (cooldownTimer < cooldown) return;
+
+        Debug.Log("Shot!");
+        cooldownTimer = 0;
+       // GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, null);
     }
+
+    #region Input
+    private void OnShoot()
+    {
+        Shoot();
+    }
+    #endregion
 }
