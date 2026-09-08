@@ -8,8 +8,7 @@ public class PlayerShooting : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public float bulletForce;
-    InputAction shootAction;
+    //InputAction shootAction;
 
     private void Start()
     {
@@ -18,12 +17,17 @@ public class PlayerShooting : MonoBehaviour
 
     private void Update()
     {
+        if(Mouse.current.leftButton.wasPressedThisFrame)
+        {
+
+        }
+
         //cooldownTimer += Time.deltaTime;
 
-        if(shootAction.IsPressed())
-        {
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, null);
-        }
+       // if(shootAction.IsPressed())
+        //{
+            //GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation, null);
+       // }
     }
 
    // public void Shoot(InputAction.CallbackContext context)
