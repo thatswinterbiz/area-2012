@@ -403,6 +403,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   cooldown: 0.25
+  bulletPrefab: {fileID: 8317497859401360555, guid: 162993eee79fc044bb6040ff1960bc63, type: 3}
+  firePoint: {fileID: 1997721780}
+  bulletForce: 1
 --- !u!114 &37804776
 MonoBehaviour:
   m_ObjectHideFlags: 0
