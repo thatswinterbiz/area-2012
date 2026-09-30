@@ -114,7 +114,7 @@ public partial class @NewInputActions: IInputActionCollection2, IDisposable
                     ""name"": ""MouseInput"",
                     ""type"": ""Value"",
                     ""id"": ""00ff9a90-914c-4699-812f-862a7c6b8d85"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -270,7 +270,7 @@ public partial class @NewInputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": "";Keyboard&Mouse"",
                     ""action"": ""MouseInput"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
