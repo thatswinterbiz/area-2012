@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 153307868}
   - component: {fileID: 153307869}
   - component: {fileID: 153307870}
+  - component: {fileID: 153307871}
   m_Layer: 0
   m_Name: Player body
   m_TagString: Player
@@ -361,6 +362,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457982fedfe2d7a4e93375175914b549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AimingScripts.PlayerRotation
+--- !u!114 &153307871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153307864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd15dbef1922d9e43875bc87cc80e993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AimingScripts.Rotator
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +682,8 @@ GameObject:
   - component: {fileID: 684437861}
   - component: {fileID: 684437863}
   - component: {fileID: 684437862}
+  - component: {fileID: 684437865}
+  - component: {fileID: 684437864}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -765,6 +780,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &684437864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684437860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 457982fedfe2d7a4e93375175914b549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AimingScripts.PlayerRotation
+--- !u!114 &684437865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684437860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd15dbef1922d9e43875bc87cc80e993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AimingScripts.Rotator
 --- !u!1 &1250863238
 GameObject:
   m_ObjectHideFlags: 0
