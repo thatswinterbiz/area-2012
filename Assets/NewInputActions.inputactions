@@ -25,9 +25,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MouseInput",
+                    "name": "Look",
                     "type": "Value",
-                    "id": "00ff9a90-914c-4699-812f-862a7c6b8d85",
+                    "id": "feaec951-f1bc-4cdb-bfe8-a58fd717b0b7",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -180,12 +180,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cee56fa8-9fe1-4d4f-9e84-18c7c5828eb6",
+                    "id": "1d0cf196-5a6e-41db-9329-5b7c6ef1eae0",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "MouseInput",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
