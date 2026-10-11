@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class PlayerHealthUI : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-    public Scrollbar scrollbar;
+    public Slider slider;
 
     // Update is called once per frame
     void Update()
     {
-        scrollbar.value = playerHealth.currentHealth;
+        slider.value = playerHealth.currentHealth;
     }
 }
