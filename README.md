@@ -1,1 +1,1 @@
-Currently a prototype, unsure if it would go on to be a completed game.
+Currently a prototype, unsure if it will go on to be a completed game.
