@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = moveInput * moveSpeed;
     }
 
-    public void Move(InputAction.CallbackContext context)
+    public void OnMove(InputValue movementValue) 
     {
-        moveInput = context.ReadValue<Vector2>();
+        moveInput = movementValue.Get<Vector2>();
     }
 }

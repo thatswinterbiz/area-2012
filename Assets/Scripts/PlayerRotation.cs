@@ -8,6 +8,7 @@ namespace AimingScripts
         // Determine mouse position and look that way
         private void OnLook(InputValue value)
         {
+            Debug.Log("onlook being called");
             Vector2 mousePosition = Camera.main.ScreenToWorldPoint(value.Get<Vector2>());
             LookAt(mousePosition);
         }
