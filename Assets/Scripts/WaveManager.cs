@@ -16,11 +16,15 @@ public class WaveManager : MonoBehaviour
 
     void StartNextWave()
     {
-
+        waveTextno.text = "Wave: " + currentWave;
+        int enemiesToSpawn = enemyCount + enemyCount;
     }
 
     public void EnemyDied()
     {
-
+        if(enemiesAlive <= 0)
+        {
+            StartNextWave();
+        }
     }
 }
