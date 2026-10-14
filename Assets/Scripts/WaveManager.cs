@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro;
 
-public class WaveManager : MonoBehaviour
+public class WaveManager : PlayerHealth
 {
     public int currentWave = 1;
     public int enemyCount = 2;
@@ -23,6 +23,14 @@ public class WaveManager : MonoBehaviour
     public void EnemyDied()
     {
         if(enemiesAlive <= 0)
+        {
+            StartNextWave();
+        }
+    }
+
+    public void PlayerDied()
+    {
+        if(currentHealth <= 0)
         {
             StartNextWave();
         }
