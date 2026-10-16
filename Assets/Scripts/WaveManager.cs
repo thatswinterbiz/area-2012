@@ -35,7 +35,7 @@ public class WaveManager : PlayerHealth
         if(currentHealth <= 0)
         {
             Destroy(player);
-            Instantiate(player);
+            Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
             waveTextno.text = "Wave: 1";
         }
     }

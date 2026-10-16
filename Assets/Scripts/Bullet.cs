@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class Bullet : EnemyHealth
 {
     public float bulletSpeed = 10f;
     public float bulletDamage = 1f;
@@ -10,5 +10,13 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = transform.right * bulletSpeed;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy"))
+        {
+            enemyCurrentHealth -= 10;
+        }
     }
 }
