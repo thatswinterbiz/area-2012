@@ -17,6 +17,7 @@ public class Bullet : EnemyHealth
         if(collision.gameObject.CompareTag("Enemy"))
         {
             enemyCurrentHealth -= 10;
+            Destroy(gameObject);
         }
     }
 }
