@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2631120271976768111}
   - component: {fileID: 8675898527473755259}
   - component: {fileID: 6177821763856226987}
+  - component: {fileID: -5639260728034393841}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -62,7 +63,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: da95c9a116f8632448b641c7a1c60045, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.990566, g: 0, b: 0, a: 1}
@@ -157,10 +158,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e111df88f8c5304eb912583ec9153f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  player: {fileID: 0}
+  player: {fileID: 7348765483324611397, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
   EnemyMovementSpeed: 5
   attackRange: 1
   nextAttackTime: 3
+--- !u!50 &-5639260728034393841
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872295083473226986}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1182774830451092146
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,8 @@ public class WaveManager : PlayerHealth
         int enemiesToSpawn = enemyCount + enemyCount;
         int randomIndex = Random.Range(0, enemySpawnPoints.Length);
         Transform randomSpawnPoint = enemySpawnPoints[randomIndex];
+
+        Debug.Log("enemy spawned");
         foreach (int i in Enumerable.Range(1, enemiesToSpawn))
         {
             Instantiate(enemyPrefab, randomSpawnPoint.position, randomSpawnPoint.rotation);
@@ -37,6 +39,7 @@ public class WaveManager : PlayerHealth
             Destroy(player);
             Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
             waveTextno.text = "Wave: 1";
+            StartNextWave();
         }
     }
 
