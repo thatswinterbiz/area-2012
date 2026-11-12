@@ -20,4 +20,9 @@ public class Bullet : EnemyHealth
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        
+    }
 }

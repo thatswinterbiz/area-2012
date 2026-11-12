@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * EnemyMovementSpeed * Time.deltaTime;
-            transform.LookAt(player);
+            transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
         }
         else
         {
