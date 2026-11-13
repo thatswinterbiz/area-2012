@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : EnemyHealth
+public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 10f;
     public float bulletDamage = 1f;
@@ -16,8 +16,9 @@ public class Bullet : EnemyHealth
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("hit");
-            enemyCurrentHealth -= 10;
+            Debug.Log("hit enemy");
+            var eh = collision.gameObject.GetComponent<EnemyHealth>();
+            eh.EnemyTakesDamage(10);
             Destroy(gameObject);
         }
     }
