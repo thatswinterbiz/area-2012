@@ -385,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8364890634647052126}
   - component: {fileID: 884928515809853189}
+  - component: {fileID: 5136926737730335854}
   m_Layer: 0
   m_Name: EnemyHealthBar
   m_TagString: Untagged
@@ -464,6 +465,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5136926737730335854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3771472763414180303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7ab972576260a74d8147ba3ec9906d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealthUI
+  enemyHealth: {fileID: 8675898527473755259}
+  slider: {fileID: 884928515809853189}
 --- !u!1 &6504768821092980767
 GameObject:
   m_ObjectHideFlags: 0

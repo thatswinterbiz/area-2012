@@ -210,6 +210,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &305550800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2848639691641804989, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
+  m_PrefabInstance: {fileID: 4287584743946005890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &413325184
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,12 +584,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8990524313044638639, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
   m_PrefabInstance: {fileID: 4287584743946005890}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 305550800}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &625155697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305550800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3150249d1b5f42347b62c790f9af22d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthUI
+  playerHealth: {fileID: 655456592}
+  slider: {fileID: 625155695}
 --- !u!1 &655456585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6437813246278746078, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
@@ -1151,25 +1170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: b90b11bf573f2b942ad40f4543ce6ced, type: 3}
   m_ActionId: c4ae02f6-72fe-4b94-a5d1-54c13b8d9932
---- !u!1 &2045448370 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5605191292743545863, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
-  m_PrefabInstance: {fileID: 4287584743946005890}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2045448377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045448370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3150249d1b5f42347b62c790f9af22d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthUI
-  playerHealth: {fileID: 0}
-  slider: {fileID: 625155695}
 --- !u!1001 &4287584743946005890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1310,9 +1310,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5605191292743545863, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2848639691641804989, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2045448377}
+      addedObject: {fileID: 625155697}
   m_SourcePrefab: {fileID: 100100000, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
