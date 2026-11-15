@@ -9,6 +9,6 @@ public class EnemyHealthUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = enemyHealth.enemyCurrentHealth;
+        slider.value = (float)enemyHealth.enemyCurrentHealth / enemyHealth.enemyMaxHealth;
     }
 }

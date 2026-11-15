@@ -9,6 +9,6 @@ public class PlayerHealthUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        slider.value = playerHealth.currentHealth;
+        slider.value = (float)playerHealth.currentHealth / playerHealth.maxHealth;
     }
 }
