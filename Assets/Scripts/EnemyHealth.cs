@@ -4,10 +4,12 @@ public class EnemyHealth : MonoBehaviour
 {
     public int enemyMaxHealth = 100;
     public int enemyCurrentHealth;
+    WaveManager waveManager;
 
     void Start()
     {
         enemyCurrentHealth = enemyMaxHealth;
+        waveManager = FindFirstObjectByType<WaveManager>();
     }
 
     public void EnemyTakesDamage(int amount)
@@ -24,8 +26,9 @@ public class EnemyHealth : MonoBehaviour
     public void EnemyDies()
     {
         Debug.Log("enemy died");
-        if(gameObject.CompareTag("Enemy"))
+        if (gameObject.CompareTag("Enemy"))
         {
+            waveManager.EnemyDied();
             Destroy(gameObject);
         }
     }

@@ -21,13 +21,14 @@ public class WaveManager : PlayerHealth
     void StartNextWave()
     {
         waveTextno.text = "Wave: " + currentWave;
-        int enemiesToSpawn = enemyCount + enemyCount;
-        int randomIndex = Random.Range(0, enemySpawnPoints.Length);
-        Transform randomSpawnPoint = enemySpawnPoints[randomIndex];
+        int enemiesToSpawn = enemyCount * currentWave;
+        enemiesAlive = enemiesToSpawn;
 
         Debug.Log("enemy spawned");
         foreach (int i in Enumerable.Range(1, enemiesToSpawn))
         {
+            int randomIndex = Random.Range(0, enemySpawnPoints.Length);
+            Transform randomSpawnPoint = enemySpawnPoints[randomIndex];
             Instantiate(enemyPrefab, randomSpawnPoint.position, randomSpawnPoint.rotation);
         }
     }
@@ -45,7 +46,8 @@ public class WaveManager : PlayerHealth
 
     public void EnemyDied()
     {
-        if(enemiesAlive <= 0)
+        enemiesAlive--;
+        if (enemiesAlive <= 0)
         {
             StartNextWave();
         }
