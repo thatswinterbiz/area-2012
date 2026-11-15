@@ -12,13 +12,16 @@ public class Bullet : MonoBehaviour
         rb.linearVelocity = transform.right * bulletSpeed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        Debug.Log("1");
+        if (collision.CompareTag("Enemy"))
         {
+            Debug.Log("2");
             Debug.Log("hit enemy");
             var eh = collision.gameObject.GetComponent<EnemyHealth>();
             eh.EnemyTakesDamage(10);
+            Debug.Log("3");
             Destroy(gameObject);
         }
     }
