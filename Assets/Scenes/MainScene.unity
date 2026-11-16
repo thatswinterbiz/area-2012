@@ -844,8 +844,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd704db0c7caba04088893e6450a6863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveManager
-  maxHealth: 100
-  currentHealth: 0
   currentWave: 1
   enemyCount: 2
   enemyPrefab: {fileID: 872295083473226986, guid: f94bee22e1111c747ae13f121e8d3207, type: 3}
@@ -1292,7 +1290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8046816357083913139, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
       propertyPath: currentHealth
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8990524313044638639, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
       propertyPath: m_Value

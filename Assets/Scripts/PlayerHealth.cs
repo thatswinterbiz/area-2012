@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
+    WaveManager waveManager;
+
     public int maxHealth = 100;
     public int currentHealth;
     private bool playerDead = false;
 
     void Start()
     {
+        waveManager = FindFirstObjectByType<WaveManager>();
+
         playerDead = false;
         currentHealth = maxHealth;
     }
@@ -28,5 +32,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("player died");
         playerDead = true;
+
+        waveManager.RestartGame();
     }
 }

@@ -2,7 +2,7 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-public class WaveManager : PlayerHealth
+public class WaveManager : MonoBehaviour
 {
     public int currentWave = 1;
     public int enemyCount = 2;
@@ -39,15 +39,12 @@ public class WaveManager : PlayerHealth
         currentWave++;
     }
 
-    void RestartGame()
+    public void RestartGame()
     {
-        if(currentHealth <= 0)
-        {
-            Destroy(player);
-            Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
-            waveTextno.text = "Wave: 1";
-            StartNextWave();
-        }
+        Destroy(player);
+        Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
+        waveTextno.text = "Wave: 1";
+        StartNextWave();
     }
 
     public void EnemyDied()
@@ -56,14 +53,6 @@ public class WaveManager : PlayerHealth
         if (enemiesAlive <= 0)
         {
             StartNextWave();
-        }
-    }
-
-    public void PlayerDied()
-    {
-        if(currentHealth <= 0)
-        {
-            RestartGame();
         }
     }
 }
