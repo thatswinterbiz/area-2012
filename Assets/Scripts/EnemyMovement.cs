@@ -12,20 +12,24 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         if (player == null) return;
+        Debug.Log("Player is not null");
         float distance = Vector3.Distance(transform.position, player.position);
 
         // Move toward player if outside attack range
-        if(distance > attackRange)
+        if (distance > attackRange)
         {
+            Debug.Log("Player is out of reach");
             Vector3 direction = (player.position - transform.position).normalized;
             transform.position += direction * EnemyMovementSpeed * Time.deltaTime;
             transform.rotation = Quaternion.FromToRotation(Vector3.up, direction);
         }
         else
         {
+            Debug.Log("Player within reach");
             // Inside attack range - perform attack
-            if(Time.time >= nextAttackTime)
+            if (Time.time >= nextAttackTime)
             {
+                Debug.Log("Attacking!!!");
                 Attack();
             }
         }
