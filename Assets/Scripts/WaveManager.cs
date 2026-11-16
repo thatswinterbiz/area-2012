@@ -31,7 +31,10 @@ public class WaveManager : PlayerHealth
             Debug.Log("Enemy spawned: " + i);
             int randomIndex = Random.Range(0, enemySpawnPoints.Length);
             Transform randomSpawnPoint = enemySpawnPoints[randomIndex];
-            Instantiate(enemyPrefab, randomSpawnPoint.position, randomSpawnPoint.rotation);
+            float randomXOffset = Random.Range(-0.5f, 0.5f);
+            float randomYOffset = Random.Range(-0.5f, 0.5f);
+            Vector3 randomOffset = new Vector2(randomXOffset, randomYOffset);
+            Instantiate(enemyPrefab, randomSpawnPoint.position + randomOffset, randomSpawnPoint.rotation);
         }
         currentWave++;
     }
