@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public PlayerMovement player;
+    private PlayerMovement player;
     public int EnemyMovementSpeed;
     public float attackRange = 1.5f;
 
@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
         // Move toward player if outside attack range
         if (distance > attackRange)
         {
-            Debug.Log("Player is out of reach");
+            Debug.Log($"Player at position {player.transform.position} is out of reach");
             Vector3 direction = (player.transform.position - transform.position).normalized;
             transform.position += direction * EnemyMovementSpeed * Time.deltaTime;
             transform.right =  direction;
