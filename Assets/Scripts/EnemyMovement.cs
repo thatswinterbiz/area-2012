@@ -43,6 +43,7 @@ public class EnemyMovement : MonoBehaviour
     void Attack()
     {
         Debug.Log("Enemy performs attack");
-        player.GetComponent<PlayerHealth>().TakeDamage(3);
+        Debug.Log("PlayerHealth found? " + (player.GetComponent<PlayerHealth>() == null));
+        player.gameObject.GetComponent<PlayerHealth>().TakeDamage(3);
     }
 }
