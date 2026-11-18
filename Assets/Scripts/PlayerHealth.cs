@@ -38,5 +38,6 @@ public class PlayerHealth : MonoBehaviour
             waveManager = FindFirstObjectByType<WaveManager>();
         }
         waveManager.RestartGame();
+        Destroy(gameObject);
     }
 }

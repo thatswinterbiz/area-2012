@@ -27,6 +27,8 @@ public class EnemyMovement : MonoBehaviour
             Vector3 direction = (player.transform.position - transform.position).normalized;
             transform.position += EnemyMovementSpeed * Time.deltaTime * direction;
             transform.right =  direction;
+            Vector3 r = transform.eulerAngles;
+            transform.eulerAngles = new Vector3(0, 0, r.z);
         }
         else
         {

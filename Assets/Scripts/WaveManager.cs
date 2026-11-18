@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
@@ -41,10 +43,10 @@ public class WaveManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Destroy(player);
-        Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
-        waveTextno.text = "Wave: 1";
-        StartNextWave();
+        SceneManager.LoadScene("MainScene");
+        //Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
+        //waveTextno.text = "Wave: 1";
+        //StartNextWave();
     }
 
     public void EnemyDied()
