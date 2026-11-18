@@ -5,7 +5,7 @@ public class EnemyMovement : MonoBehaviour
     private PlayerMovement player;
     public int EnemyMovementSpeed;
     public float attackRange = 1.5f;
-
+    float timer = 0;
     public float nextAttackTime = 0;
 
     void Start()
@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         if (player == null) return;
+        timer += Time.deltaTime;
         Debug.Log("Player is not null");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
@@ -34,7 +35,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log("Player within reach");
             // Inside attack range - perform attack
-            if (Time.time >= nextAttackTime)
+            if (timer >= nextAttackTime)
             {
                 Debug.Log("Attacking!!!");
                 Attack();
