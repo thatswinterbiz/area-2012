@@ -160,7 +160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   EnemyMovementSpeed: 3
   attackRange: 1.5
-  nextAttackTime: 0
+  nextAttackTime: 2
 --- !u!50 &-5639260728034393841
 Rigidbody2D:
   serializedVersion: 5

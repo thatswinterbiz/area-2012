@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
     public int EnemyMovementSpeed;
     public float attackRange = 1.5f;
     float timer = 0;
-    public float nextAttackTime = 0;
+    public float nextAttackTime;
 
     void Start()
     {
@@ -18,6 +18,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (player == null) return;
         timer += Time.deltaTime;
+        Debug.Log("Timer: " + timer);
         Debug.Log("Player is not null");
         float distance = Vector3.Distance(transform.position, player.transform.position);
 
@@ -38,6 +39,7 @@ public class EnemyMovement : MonoBehaviour
             if (timer >= nextAttackTime)
             {
                 Debug.Log("Attacking!!!");
+                timer = 0;
                 Attack();
             }
         }
