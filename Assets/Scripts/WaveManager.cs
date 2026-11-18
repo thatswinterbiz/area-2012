@@ -44,9 +44,6 @@ public class WaveManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("MainScene");
-        //Instantiate(player, playerSpawnPoint.position, playerSpawnPoint.rotation);
-        //waveTextno.text = "Wave: 1";
-        //StartNextWave();
     }
 
     public void EnemyDied()
