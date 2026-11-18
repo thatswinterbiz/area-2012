@@ -34,7 +34,7 @@ public class WaveManager : MonoBehaviour
             float randomXOffset = Random.Range(-0.5f, 0.5f);
             float randomYOffset = Random.Range(-0.5f, 0.5f);
             Vector3 randomOffset = new Vector2(randomXOffset, randomYOffset);
-            Instantiate(enemyPrefab, randomSpawnPoint.position + randomOffset, randomSpawnPoint.rotation);
+            Instantiate(enemyPrefab, randomSpawnPoint.position + randomOffset, Quaternion.identity);
         }
         currentWave++;
     }

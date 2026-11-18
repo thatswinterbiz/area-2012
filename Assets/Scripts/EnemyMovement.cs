@@ -25,7 +25,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log($"Player at position {player.transform.position} is out of reach");
             Vector3 direction = (player.transform.position - transform.position).normalized;
-            transform.position += direction * EnemyMovementSpeed * Time.deltaTime;
+            transform.position += EnemyMovementSpeed * Time.deltaTime * direction;
             transform.right =  direction;
         }
         else

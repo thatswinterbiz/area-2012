@@ -33,6 +33,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("player died");
         playerDead = true;
 
+        if (waveManager == null)
+        {
+            waveManager = FindFirstObjectByType<WaveManager>();
+        }
         waveManager.RestartGame();
     }
 }
