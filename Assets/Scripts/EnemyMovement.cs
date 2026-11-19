@@ -7,14 +7,16 @@ public class EnemyMovement : MonoBehaviour
     public float attackRange = 1.5f;
     float timer = 0;
     public float nextAttackTime;
+    Rigidbody2D rb;
 
     void Start()
     {
         player = FindFirstObjectByType<PlayerMovement>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (player == null) return;
         timer += Time.deltaTime;
@@ -27,8 +29,8 @@ public class EnemyMovement : MonoBehaviour
         {
             Debug.Log($"Player at position {player.transform.position} is out of reach");
             Vector3 direction = (player.transform.position - transform.position).normalized;
-            transform.position += EnemyMovementSpeed * Time.deltaTime * direction;
-            transform.right =  direction;
+            transform.right = direction;
+            rb.linearVelocity = EnemyMovementSpeed * transform.right;
             Vector3 r = transform.eulerAngles;
             transform.eulerAngles = new Vector3(0, 0, r.z);
         }
