@@ -3,6 +3,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     private PlayerMovement player;
+    private PlayerHealth playerHealth;
     public int EnemyMovementSpeed;
     public float attackRange = 1.5f;
     float timer = 0;
@@ -11,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
     {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         player = FindFirstObjectByType<PlayerMovement>();
         rb = GetComponent<Rigidbody2D>();
     }
@@ -51,6 +53,6 @@ public class EnemyMovement : MonoBehaviour
     {
         Debug.Log("Enemy performs attack");
         Debug.Log("PlayerHealth found? " + (player.GetComponent<PlayerHealth>() == null));
-        player.gameObject.GetComponent<PlayerHealth>().TakeDamage(3);
+        playerHealth.TakeDamage(3);
     }
 }

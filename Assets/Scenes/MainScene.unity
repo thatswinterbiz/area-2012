@@ -164,52 +164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: b90b11bf573f2b942ad40f4543ce6ced, type: 3}
   m_ActionId: 821d03ed-8ee2-4fce-a831-b7fb63765071
---- !u!1 &304503083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 304503085}
-  - component: {fileID: 304503084}
-  m_Layer: 0
-  m_Name: PlayerHealthManagement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &304503084
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304503083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3150249d1b5f42347b62c790f9af22d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealthUI
-  playerHealth: {fileID: 655456592}
-  slider: {fileID: 625155695}
---- !u!4 &304503085
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 304503083}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 482.38177, y: 295.21957, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305550800 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2848639691641804989, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
@@ -760,20 +714,52 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5605191292743545863, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
   m_PrefabInstance: {fileID: 4287584743946005890}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1134838681
-MonoBehaviour:
+--- !u!61 &1134838688
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1134838674}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53fede417e32cb74d9fc1270e883c1b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  maxHealth: 100
-  currentHealth: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &1240699991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1319,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5605191292743545863, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1134838681}
+      addedObject: {fileID: 1134838688}
     - targetCorrespondingSourceObject: {fileID: 2848639691641804989, guid: c1416f5206606f44d9e1d5b0342cd5b3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 625155697}
@@ -1346,7 +1332,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1679088764}
   - {fileID: 413325187}
-  - {fileID: 304503085}
   - {fileID: 1494043665}
   - {fileID: 122188744}
   - {fileID: 538630051}
